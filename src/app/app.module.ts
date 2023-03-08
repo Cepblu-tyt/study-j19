@@ -3,14 +3,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import {RouterModule, Routes} from "@angular/router";
+const appRoutes: Routes = [
+  {
+    path: 'school'
+    component: SchoolDashboardComponent
+  }
+]
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    RouterModule,forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
